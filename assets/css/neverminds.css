@@ -202,4 +202,7 @@ img { max-width: 100%; }
     grid-template-areas: "head" "img" "purp";
   }
   .bento-img { min-height: 240px; }
+  .nm-footer { flex-direction: column; align-items: center; text-align: center; gap: 14px; }
+  .nm-footer-legal { flex: none; }
+  .nm-footer-links { justify-content: center; }
 }
