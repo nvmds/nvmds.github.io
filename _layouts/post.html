@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+{% assign author_data = site.data.founders | where: "name", page.author | first %}
 {% assign related = site.posts | where_exp: "p", "p.category == page.category" | where_exp: "p", "p.url != page.url" | limit: 3 %}
 {% if related.size == 0 %}
   {% assign related = site.posts | where_exp: "p", "p.url != page.url" | limit: 3 %}
@@ -14,24 +15,26 @@ layout: default
         <span style="color:var(--nm-{{ page.category_color | default: 'teal' }});">● {{ page.category }}</span> · {{ page.reading_time }} · {{ page.author }}
       </div>
       <h1 style="font-size:clamp(32px,5vw,52px);letter-spacing:-0.03em;font-weight:600;line-height:1.04;">{{ page.title }}</h1>
+      {% if page.subtitle %}<p class="nm-subtitle">{{ page.subtitle }}</p>{% endif %}
       <p style="font-size:clamp(18px,2.2vw,22px);color:var(--nm-mute);line-height:1.5;margin-top:18px;">{{ page.excerpt }}</p>
     </div>
 
     {% if page.cover %}
       <img src="{{ page.cover | relative_url }}" alt="{{ page.title }}" style="width:100%;height:clamp(220px, 40vw, 460px);object-fit:cover;border-radius:24px;display:block;">
-    {% else %}
-      <div class="nm-placeholder" style="height:clamp(220px, 40vw, 460px);border-radius:24px;background:var(--nm-{{ page.category_color | default: 'teal' }});opacity:0.92;">
-        <span>hero image</span>
-      </div>
     {% endif %}
 
     <div class="nm-prose" style="margin-top:clamp(36px,5vw,56px);">
       {{ content }}
+      {% include changelog.html %}
     </div>
 
     <div class="nm-prose" style="margin-top:40px;padding-top:28px;border-top:1px solid var(--nm-line);display:flex;align-items:center;gap:16px;">
       <div style="width:56px;height:56px;border-radius:999px;background:var(--nm-{{ page.category_color | default: 'teal' }});padding:4px;flex-shrink:0;">
+        {% if author_data.img %}
+        <img src="{{ author_data.img | relative_url }}" alt="{{ page.author }}" class="no-lightbox" style="width:100%;height:100%;object-fit:cover;object-position:{{ author_data.img_position | default: 'center' }};border-radius:999px;display:block;margin:0;box-shadow:none;">
+        {% else %}
         <div style="width:100%;height:100%;border-radius:999px;background:var(--nm-cream);"></div>
+        {% endif %}
       </div>
       <div>
         <div style="font-size:16px;font-weight:600;">{{ page.author }}</div>
@@ -46,12 +49,17 @@ layout: default
     <div class="nm-grid-3">
       {% for p in related %}
       <a href="{{ p.url | relative_url }}" class="nm-card nm-card-h" style="border-radius:22px;overflow:hidden;display:flex;flex-direction:column;">
-        <div class="nm-placeholder" style="height:150px;background:var(--nm-{{ p.category_color | default: 'teal' }});opacity:0.92;"><span>cover</span></div>
+        {% if p.cover %}
+        <img src="{{ p.cover | relative_url }}" alt="{{ p.title }}" style="width:100%;height:150px;object-fit:cover;display:block;">
+        {% else %}
+        <div style="height:5px;background:var(--nm-{{ p.category_color | default: 'teal' }});"></div>
+        {% endif %}
         <div style="padding:20px;display:flex;flex-direction:column;gap:10px;flex:1;">
           <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--nm-mute);">
             <span style="color:var(--nm-{{ p.category_color | default: 'teal' }});">● {{ p.category }}</span> · {{ p.reading_time }}
           </div>
           <h3 style="font-size:18px;font-weight:600;letter-spacing:-0.01em;line-height:1.2;">{{ p.title }}</h3>
+          <span style="margin-top:auto;font-size:13px;font-weight:600;color:var(--nm-{{ p.category_color | default: 'teal' }});">Read article →</span>
         </div>
       </a>
       {% endfor %}

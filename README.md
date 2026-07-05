@@ -17,19 +17,23 @@ Jekyll watches the source files and rebuilds automatically; refresh the browser 
 
 ## Structure
 
-- `_layouts/`, `_includes/` — shared page chrome (nav, footer, contact CTA) and templates
-- `_data/founders.yml`, `_data/services.yml` — founder profiles and service listings
-- `_posts/` — Journal articles (standard Jekyll posts, one Markdown file per article)
-- `index.md`, `about.md`, `services.md`, `workshops.md`, `journal/index.html` — the site's pages
-- `assets/` — CSS, JS and images
+- `_layouts/`, `_includes/` — shared page chrome (nav, footer, contact CTA), the post layout, and the carousel/changelog includes
+- `_data/founders.yml`, `_data/services.yml`, `_data/workshops.yml` — founder profiles, services, and workshops content
+- `_posts/` — published Journal articles (standard Jekyll posts, one Markdown file per article)
+- `_drafts/` — in-progress articles not yet ready to publish (see `EDITORIAL_WORKFLOW.md`)
+- `index.html`, `about.html`, `services.html`, `workshops.html`, `journal/index.html` — the site's pages
+- `assets/` — CSS, JS, images (including per-post image folders), and downloadable resources (slide decks, PDFs)
 
-## Adding a Journal post
+## Writing Journal posts
 
-Add a new file to `_posts/` named `YYYY-MM-DD-slug.md` with front matter like:
+See **`EDITORIAL_WORKFLOW.md`** for the draft → publish process, front matter conventions, and how to use images, carousels, and changelogs. See **`WRITING_STYLE_GUIDE.md`** for voice and tone.
+
+Quick front matter reference for a new post in `_posts/YYYY-MM-DD-slug.md`:
 
 ```yaml
 ---
 title: "Post title"
+subtitle: "Optional"
 category: "Roadmap Mastery"   # also: Org Design, Conference Notes, Talks & Recordings
 category_color: lime          # teal | lime | orange | purple
 reading_time: "6 min"
@@ -41,6 +45,8 @@ cover: /assets/images/blog/example.webp   # optional; omit for a plain color pla
 
 Article content in Markdown goes here.
 ```
+
+To preview drafts locally, run `bundle exec jekyll serve --drafts`.
 
 ## Deployment
 

@@ -6,10 +6,10 @@
   img: /assets/images/nele-portrait.jpeg
   img_position: "50% 38%"
   context_img: /assets/images/nele-context.jpeg
-  context_position: "48% 80%"
-  context_zoom: 2.1
+  context_position: "48% 78%"
+  context_zoom: 1
   home_img: /assets/images/nele-home.jpeg
-  home_position: "50% 42%"
+  home_position: "50% 90%"
   roles:
     - title: "Founder · Hands-on Analyst"
       org: "Neverminds VOF"
