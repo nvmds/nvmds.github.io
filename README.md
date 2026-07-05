@@ -4,14 +4,23 @@ Source for the [Neverminds](https://neverminds.be) website, built with [Jekyll](
 
 ## Local development
 
-Requires Ruby (2.7+) and Bundler.
+Requires Ruby 3.2.0 (pinned in `.ruby-version`) and Bundler. With
+[rbenv](https://github.com/rbenv/rbenv), the complete setup is:
 
 ```bash
+rbenv install -s 3.2.0
+gem install bundler -v 4.0.15
 bundle install
 bundle exec jekyll serve
 ```
 
 Then open http://localhost:4000.
+
+To verify the site without starting a server, run:
+
+```bash
+bundle exec jekyll build
+```
 
 Jekyll watches the source files and rebuilds automatically; refresh the browser to see changes (`--livereload` can be added to the serve command for auto-refresh).
 

@@ -1,0 +1,63 @@
+---
+layout: default
+nav_active: "Journal"
+title: "Worth Your Time"
+description: "Books and resources recommended by Michael Voorhaen on teams, leadership, organizational design and execution."
+permalink: /worth-your-time/
+---
+<main>
+  <section class="nm-wrap" style="margin-top:clamp(24px,4vw,44px);">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:var(--nm-orange);margin-bottom:14px;">
+      Michael's recommendations
+    </div>
+    <h1 style="font-size:clamp(40px,7vw,76px);letter-spacing:-0.04em;font-weight:600;line-height:0.96;max-width:900px;">
+      Worth Your Time
+    </h1>
+    <p style="font-size:clamp(19px,2.2vw,23px);color:var(--nm-navy);line-height:1.45;max-width:680px;margin-top:22px;">
+      Books and resources recommended by Michael.
+    </p>
+    <p style="font-size:16px;color:var(--nm-mute);line-height:1.6;max-width:680px;margin-top:12px;">
+      A growing collection of ideas that have shaped how I think about teams, leadership, organizational design and turning direction into meaningful work.
+    </p>
+  </section>
+
+  <nav class="nm-wrap wyt-category-nav" aria-label="Recommendation categories">
+    {% for category in site.data.worth_your_time.categories %}
+    <a class="nm-chip-btn wyt-category-link" href="#{{ category.slug }}">
+      <span aria-hidden="true" style="color:var(--nm-{{ category.color }});">●</span>
+      {{ category.name }}
+    </a>
+    {% endfor %}
+  </nav>
+
+  {% for category in site.data.worth_your_time.categories %}
+    {% assign category_books = site.data.worth_your_time.books | where: "category", category.name %}
+    <section id="{{ category.slug }}" class="nm-wrap nm-section">
+      <div class="wyt-category-heading">
+        <div>
+          <div class="wyt-category-mark" style="background:var(--nm-{{ category.color }});"></div>
+          <h2>{{ category.name }}</h2>
+        </div>
+        <p>{{ category.description }}</p>
+      </div>
+
+      <div class="wyt-grid">
+        {% for book in category_books %}
+        <a class="nm-card nm-card-h wyt-book" href="{{ book.url }}" target="_blank" rel="noopener noreferrer" aria-label="Read more about {{ book.title }} by {{ book.author }}">
+          <div class="wyt-cover" style="--wyt-accent:var(--nm-{{ category.color }});">
+            <img{% if book.author == "Patrick Lencioni" %} class="wyt-bookshot"{% endif %} src="{{ book.cover | relative_url }}" alt="Cover of {{ book.title }} by {{ book.author }}" loading="lazy">
+          </div>
+          <div class="wyt-book-copy">
+            <div class="wyt-type">{{ book.type }}</div>
+            <h3>{{ book.title }}</h3>
+            <div class="wyt-author">{{ book.author }}</div>
+            <p>{{ book.recommendation }}</p>
+            {% if book.edition_note %}<div class="wyt-edition">{{ book.edition_note }}</div>{% endif %}
+            <span class="wyt-read" style="color:var(--nm-{{ category.color }});">Explore the book <span aria-hidden="true">↗</span></span>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+    </section>
+  {% endfor %}
+</main>

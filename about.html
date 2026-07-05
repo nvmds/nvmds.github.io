@@ -28,14 +28,27 @@ permalink: /about/
   <section class="nm-wrap nm-section">
     <div class="nm-grid-2" style="align-items:stretch;">
       {% for f in site.data.founders %}
-      <div class="nm-card" style="border-radius:28px;overflow:hidden;padding:0;display:flex;flex-direction:column;">
-        <div style="position:relative;height:320px;flex-shrink:0;overflow:hidden;background:var(--nm-{{ f.color }});">
-          <img src="{{ f.context_img | relative_url }}" alt="{{ f.name }} at work" style="width:100%;height:100%;object-fit:cover;object-position:{{ f.context_position }};transform:scale({{ f.context_zoom | default: 1 }});transform-origin:{{ f.context_position }};display:block;">
+      <div class="nm-founder-context">
+        <div class="nm-card" style="border-radius:28px;overflow:hidden;padding:0;display:flex;flex-direction:column;">
+          <div style="position:relative;height:320px;flex-shrink:0;overflow:hidden;background:var(--nm-{{ f.color }});">
+            <img src="{{ f.context_img | relative_url }}" alt="{{ f.name }} at work" style="width:100%;height:100%;object-fit:cover;object-position:{{ f.context_position }};transform:scale({{ f.context_zoom | default: 1 }});transform-origin:{{ f.context_position }};display:block;">
+          </div>
+          <div style="padding:22px clamp(20px,2.4vw,28px);">
+            <div style="font-size:19px;font-weight:600;">{{ f.name }}</div>
+            <div style="font-size:14px;color:var(--nm-mute);">{{ f.role }}</div>
+          </div>
         </div>
-        <div style="padding:22px clamp(20px,2.4vw,28px);">
-          <div style="font-size:19px;font-weight:600;">{{ f.name }}</div>
-          <div style="font-size:14px;color:var(--nm-mute);">{{ f.role }}</div>
-        </div>
+
+        {% if f.slug == "michael" %}
+        <a href="{{ '/worth-your-time/' | relative_url }}" class="nm-about-reading-link">
+          <span>
+            <small>The bigger picture</small>
+            <strong>Worth Your Time</strong>
+            <span>Books and resources that have shaped how I think.</span>
+          </span>
+          <span aria-hidden="true">→</span>
+        </a>
+        {% endif %}
       </div>
       {% endfor %}
     </div>

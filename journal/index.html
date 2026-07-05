@@ -44,25 +44,34 @@ extra_js: /assets/js/journal.js
   <!-- FEATURED -->
   {% if featured %}
   <section class="nm-wrap" style="margin-top:clamp(28px,4vw,40px);">
-    <a href="{{ featured.url | relative_url }}" class="nm-card nm-card-h{% if featured.cover %} nm-feat{% endif %}" style="border-radius:28px;overflow:hidden;display:block;"
-       data-journal-card="{{ featured.category }}"
-       data-journal-search="{{ featured.title | append: ' ' | append: featured.excerpt | append: ' ' | append: featured.category | downcase }}">
-      {% if featured.cover %}
-      <div class="nm-feat-img" style="position:relative;min-height:340px;">
-        <img src="{{ featured.cover | relative_url }}" alt="{{ featured.title }}" style="width:100%;height:100%;object-fit:cover;display:block;">
-        <span style="position:absolute;top:20px;left:20px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;background:rgba(255,255,255,0.92);color:var(--nm-navy);padding:6px 12px;border-radius:999px;">Featured</span>
-      </div>
-      {% endif %}
-      <div style="padding:clamp(28px,3.5vw,48px);display:flex;flex-direction:column;justify-content:center;gap:16px;{% unless featured.cover %}border-left:5px solid var(--nm-{{ featured.category_color | default: 'teal' }});{% endunless %}">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--nm-mute);display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-          {% unless featured.cover %}<span style="letter-spacing:0.06em;text-transform:uppercase;background:var(--nm-{{ featured.category_color | default: 'teal' }});color:#fff;padding:5px 11px;border-radius:999px;font-weight:600;">Featured</span>{% endunless %}
-          <span><span style="color:var(--nm-{{ featured.category_color | default: 'teal' }});">● {{ featured.category }}</span> · {{ featured.reading_time }} · {{ featured.author }}</span>
+    <div class="nm-featured-row">
+      <a href="{{ featured.url | relative_url }}" class="nm-card nm-card-h{% if featured.cover %} nm-feat{% endif %}" style="border-radius:28px;overflow:hidden;display:block;"
+         data-journal-card="{{ featured.category }}"
+         data-journal-search="{{ featured.title | append: ' ' | append: featured.excerpt | append: ' ' | append: featured.category | downcase }}">
+        {% if featured.cover %}
+        <div class="nm-feat-img" style="position:relative;min-height:340px;">
+          <img src="{{ featured.cover | relative_url }}" alt="{{ featured.title }}" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <span style="position:absolute;top:20px;left:20px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;background:rgba(255,255,255,0.92);color:var(--nm-navy);padding:6px 12px;border-radius:999px;">Featured</span>
         </div>
-        <h2 style="font-size:clamp(26px,3.4vw,38px);letter-spacing:-0.025em;font-weight:600;line-height:1.06;">{{ featured.title }}</h2>
-        <p style="font-size:clamp(16px,1.8vw,18px);color:var(--nm-mute);line-height:1.55;margin:0;">{{ featured.excerpt }}</p>
-        <span style="font-size:15px;font-weight:600;border-bottom:2px solid var(--nm-{{ featured.category_color | default: 'teal' }});align-self:flex-start;padding-bottom:2px;margin-top:4px;">Read article →</span>
-      </div>
-    </a>
+        {% endif %}
+        <div style="padding:clamp(28px,3.5vw,48px);display:flex;flex-direction:column;justify-content:center;gap:16px;{% unless featured.cover %}border-left:5px solid var(--nm-{{ featured.category_color | default: 'teal' }});{% endunless %}">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--nm-mute);display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+            {% unless featured.cover %}<span style="letter-spacing:0.06em;text-transform:uppercase;background:var(--nm-{{ featured.category_color | default: 'teal' }});color:#fff;padding:5px 11px;border-radius:999px;font-weight:600;">Featured</span>{% endunless %}
+            <span><span style="color:var(--nm-{{ featured.category_color | default: 'teal' }});">● {{ featured.category }}</span> · {{ featured.reading_time }} · {{ featured.author }}</span>
+          </div>
+          <h2 style="font-size:clamp(26px,3.4vw,38px);letter-spacing:-0.025em;font-weight:600;line-height:1.06;">{{ featured.title }}</h2>
+          <p style="font-size:clamp(16px,1.8vw,18px);color:var(--nm-mute);line-height:1.55;margin:0;">{{ featured.excerpt }}</p>
+          <span style="font-size:15px;font-weight:600;border-bottom:2px solid var(--nm-{{ featured.category_color | default: 'teal' }});align-self:flex-start;padding-bottom:2px;margin-top:4px;">Read article →</span>
+        </div>
+      </a>
+      <a href="{{ '/worth-your-time/' | relative_url }}" class="nm-journal-trove-link">
+        <span>
+          <strong>Worth Your Time</strong>
+          <small>Books and resources recommended by Michael</small>
+        </span>
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
   </section>
   {% endif %}
 

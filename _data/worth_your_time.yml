@@ -1,0 +1,154 @@
+categories:
+  - name: "Product management"
+    slug: product-management
+    color: orange
+    description: "Creating products customers value and building organizations around outcomes rather than output."
+
+  - name: "Teams & organizational health"
+    slug: teams-organizational-health
+    color: purple
+    description: "Building cohesive teams, creating clarity and making work more meaningful."
+
+  - name: "Trust, leadership & service"
+    slug: trust-leadership-service
+    color: orange
+    description: "Leading with honesty, choosing better language and earning trust through service."
+
+  - name: "Organizational design & systems thinking"
+    slug: organizational-design-systems-thinking
+    color: teal
+    description: "Understanding organizations as systems and designing them more deliberately."
+
+  - name: "Direction & execution"
+    slug: direction-execution
+    color: lime
+    description: "Connecting long-term purpose to visible, meaningful work."
+
+books:
+  - title: "INSPIRED"
+    author: "Marty Cagan"
+    type: "Book"
+    category: "Product management"
+    cover: "/assets/images/worth-your-time/inspired.webp"
+    cover_source: "https://www.svpg.com/wp-content/uploads/2022/04/INSPIRED-2D-e1732635982803.jpg"
+    url: "https://www.svpg.com/books/inspired-how-to-create-tech-products-customers-love-2nd-edition/"
+    recommendation: "A practical foundation for product discovery, strong product teams and creating technology products that work for customers and the business."
+
+  - title: "Escaping the Build Trap"
+    author: "Melissa Perri"
+    type: "Book"
+    category: "Product management"
+    cover: "/assets/images/worth-your-time/escaping-build-trap.webp"
+    cover_source: "https://learning.oreilly.com/library/cover/9781491973783/400w/"
+    url: "https://www.oreilly.com/library/view/escaping-the-build/9781491973783/"
+    recommendation: "A sharp explanation of why output-driven organizations keep shipping without creating value—and what effective product management must change."
+
+  - title: "The Five Dysfunctions of a Team"
+    author: "Patrick Lencioni"
+    type: "Book"
+    category: "Teams & organizational health"
+    cover: "/assets/images/worth-your-time/five-dysfunctions.webp"
+    cover_source: "https://files.tablegroup.com/wp-content/uploads/2020/12/14170337/dysfunctions.png"
+    url: "https://www.tablegroup.com/product/dysfunctions/"
+    recommendation: "A simple, memorable model for naming the patterns that quietly undermine a team—and doing something about them."
+
+  - title: "The Advantage"
+    author: "Patrick Lencioni"
+    type: "Book"
+    category: "Teams & organizational health"
+    cover: "/assets/images/worth-your-time/the-advantage.webp"
+    cover_source: "https://files.tablegroup.com/wp-content/uploads/2020/12/14165613/advantage.png"
+    url: "https://www.tablegroup.com/product/the-advantage/"
+    recommendation: "Lencioni's most complete view of organizational health: a cohesive leadership team, real clarity and systems that reinforce both."
+
+  - title: "The Ideal Team Player"
+    author: "Patrick Lencioni"
+    type: "Book"
+    category: "Teams & organizational health"
+    cover: "/assets/images/worth-your-time/ideal-team-player.webp"
+    cover_source: "https://files.tablegroup.com/wp-content/uploads/2020/12/14170940/book.png"
+    url: "https://www.tablegroup.com/product/ideal-team-player/"
+    recommendation: "Humble, hungry and smart is an immediately useful lens for hiring, developing and talking about how people contribute to a team."
+
+  - title: "Radical Candor"
+    author: "Kim Scott"
+    type: "Book"
+    category: "Trust, leadership & service"
+    cover: "/assets/images/worth-your-time/radical-candor.webp"
+    cover_source: "https://www.radicalcandor.com/hubfs/RC-Book.png"
+    url: "https://www.radicalcandor.com/the-book"
+    recommendation: "A useful framework for giving direct feedback without losing the personal care that makes honesty constructive."
+
+  - title: "Leadership Is Language"
+    author: "L. David Marquet"
+    type: "Book"
+    category: "Trust, leadership & service"
+    cover: "/assets/images/worth-your-time/leadership-is-language.webp"
+    cover_source: "https://images4.penguinrandomhouse.com/cover/9780735217539"
+    url: "https://www.penguinrandomhouse.com/books/555238/leadership-is-language-by-l-david-marquet/"
+    recommendation: "Shows how small changes in a leader's language can replace control and compliance with ownership and better decisions."
+
+  - title: "The Fifth Discipline"
+    author: "Peter M. Senge"
+    type: "Book"
+    category: "Organizational design & systems thinking"
+    cover: "/assets/images/worth-your-time/fifth-discipline.webp"
+    cover_source: "https://images4.penguinrandomhouse.com/cover/9780385517256"
+    url: "https://www.penguinrandomhouse.com/books/163984/the-fifth-discipline-by-peter-m-senge/"
+    recommendation: "A foundational book for seeing organizations as living systems and understanding what it takes to become a learning organization."
+
+  - title: "Organization Design"
+    author: "Nicolay Worren"
+    type: "Book"
+    category: "Organizational design & systems thinking"
+    cover: "/assets/images/worth-your-time/organization-design.webp"
+    cover_source: "https://images.routledge.com/common/jackets/crclarge/978113850/9781138502864.jpg"
+    url: "https://www.routledge.com/Organization-Design-Simplifying-complex-systems/Worren/p/book/9781138502864"
+    recommendation: "A rigorous, practical toolkit for working with roles, units, interfaces and the complexity created by organizational structure."
+
+  - title: "10X ORG"
+    author: "Alexey Krivitsky, Craig Larman & Roland Flemm"
+    type: "Book"
+    category: "Organizational design & systems thinking"
+    cover: "/assets/images/worth-your-time/10x-org.webp"
+    cover_source: "https://www.10xorg.com/images/book-cover-smaller.jpg"
+    url: "https://www.10xorg.com/"
+    recommendation: "A people-centered org design system for aligning strategy, structure, learning and AI. It also includes the Strobbo journey and Michael's work there."
+    edition_note: "A Manager's Guide to Elevating Business Performance with People and AI."
+
+  - title: "Navigating Complexity of Cognitive Load in Software Product Development"
+    author: "Jürgen De Smet & Viktor Grgić"
+    type: "Free eBook"
+    category: "Organizational design & systems thinking"
+    cover: "/assets/images/worth-your-time/cognitive-load.webp"
+    cover_source: "https://uploads.teachablecdn.com/attachments/a3tgYErMRiu7z4QasP24_01.+book+cover+right.png"
+    url: "https://learnhow.simplification.works/p/cognitive-load"
+    recommendation: "Clears up common misconceptions about cognitive load and makes a strong case for fluid ownership, backed by systems thinking and practical ways to reduce cognitive friction."
+    edition_note: "Available as a free eBook with 17 practical guides."
+
+  - title: "Reinventing Organizations"
+    author: "Frédéric Laloux"
+    type: "Book"
+    category: "Organizational design & systems thinking"
+    cover: "/assets/images/worth-your-time/reinventing-organizations.webp"
+    cover_source: "https://covers.openlibrary.org/b/id/9159064-L.jpg"
+    url: "https://www.reinventingorganizations.com/"
+    recommendation: "A challenge to many default assumptions about management, grounded in examples of self-management, wholeness and evolutionary purpose."
+
+  - title: "The Infinite Game"
+    author: "Simon Sinek"
+    type: "Book"
+    category: "Direction & execution"
+    cover: "/assets/images/worth-your-time/infinite-game.webp"
+    cover_source: "https://simonsinek.com/images/books/the-infinite-game.webp"
+    url: "https://simonsinek.com/books/the-infinite-game"
+    recommendation: "A helpful shift from short-term winning to purpose, resilience and the responsibility to keep improving over time."
+
+  - title: "Leading with Obeya"
+    author: "Tim Wiegel"
+    type: "Book"
+    category: "Direction & execution"
+    cover: "/assets/images/worth-your-time/leading-with-obeya.webp"
+    cover_source: "https://leadingwithobeya.com/wp-content/uploads/viewing-copy-leading-with-obeya.pdf"
+    url: "https://leadingwithobeya.com/what-is-obeya/leading-with-obeya-the-book/"
+    recommendation: "A practical bridge between strategy and daily execution through visual management, shared context and better leadership conversations."
