@@ -1,0 +1,93 @@
+---
+layout: default
+nav_active: "Journal"
+title: "Journal"
+permalink: /journal/
+extra_js: /assets/js/journal.js
+---
+{% assign categories = site.posts | map: "category" | uniq | sort %}
+{% assign featured = site.posts | where_exp: "p", "p.featured == true" | first %}
+{% unless featured %}{% assign featured = site.posts | first %}{% endunless %}
+{% assign rest = site.posts | where_exp: "p", "p.url != featured.url" %}
+
+<main>
+  <!-- HEADER -->
+  <section class="nm-wrap" style="margin-top:clamp(24px,4vw,44px);">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:var(--nm-orange);margin-bottom:14px;">
+      The Neverminds Journal
+    </div>
+    <h1 style="font-size:clamp(36px,6vw,68px);letter-spacing:-0.035em;font-weight:600;line-height:0.98;max-width:900px;">
+      Notes on product, roadmaps &amp; why organisations get stuck.
+    </h1>
+    <p style="font-size:clamp(17px,2vw,20px);color:var(--nm-mute);line-height:1.5;max-width:620px;margin-top:22px;">
+      Field notes from the work, written between projects. No fluff, no growth hacks.
+    </p>
+  </section>
+
+  <!-- TOOLBAR -->
+  <section class="nm-wrap" style="margin-top:clamp(28px,4vw,44px);">
+    <div class="nm-toolbar">
+      <label class="nm-search">
+        <span>⌕</span>
+        <input type="text" data-journal-search placeholder="Search the journal…" aria-label="Search the journal">
+        <button type="button" class="nm-search-clear" data-journal-clear aria-label="Clear search">✕</button>
+      </label>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <button type="button" class="nm-chip-btn active" data-journal-category="All">All</button>
+        {% for c in categories %}
+        <button type="button" class="nm-chip-btn" data-journal-category="{{ c }}">{{ c }}</button>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED -->
+  {% if featured %}
+  <section class="nm-wrap" style="margin-top:clamp(28px,4vw,40px);">
+    <a href="{{ featured.url | relative_url }}" class="nm-card nm-card-h nm-feat" style="border-radius:28px;overflow:hidden;"
+       data-journal-card="{{ featured.category }}"
+       data-journal-search="{{ featured.title | append: ' ' | append: featured.excerpt | append: ' ' | append: featured.category | downcase }}">
+      <div class="nm-feat-img nm-placeholder" style="background:var(--nm-{{ featured.category_color | default: 'teal' }});min-height:340px;position:relative;">
+        <span>featured cover</span>
+        <span style="position:absolute;top:20px;left:20px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;background:rgba(255,255,255,0.92);color:var(--nm-navy);padding:6px 12px;border-radius:999px;">Featured</span>
+      </div>
+      <div style="padding:clamp(28px,3.5vw,48px);display:flex;flex-direction:column;justify-content:center;gap:16px;">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--nm-mute);">
+          <span style="color:var(--nm-{{ featured.category_color | default: 'teal' }});">● {{ featured.category }}</span> · {{ featured.reading_time }} · {{ featured.author }}
+        </div>
+        <h2 style="font-size:clamp(26px,3.4vw,38px);letter-spacing:-0.025em;font-weight:600;line-height:1.06;">{{ featured.title }}</h2>
+        <p style="font-size:clamp(16px,1.8vw,18px);color:var(--nm-mute);line-height:1.55;margin:0;">{{ featured.excerpt }}</p>
+        <span style="font-size:15px;font-weight:600;border-bottom:2px solid var(--nm-{{ featured.category_color | default: 'teal' }});align-self:flex-start;padding-bottom:2px;margin-top:4px;">Read article →</span>
+      </div>
+    </a>
+  </section>
+  {% endif %}
+
+  <!-- GRID -->
+  <section class="nm-wrap" style="margin-top:clamp(20px,3vw,28px);">
+    <div class="nm-grid-3">
+      {% for p in rest %}
+      <a href="{{ p.url | relative_url }}" class="nm-card nm-card-h" style="border-radius:22px;overflow:hidden;display:flex;flex-direction:column;"
+         data-journal-card="{{ p.category }}"
+         data-journal-search="{{ p.title | append: ' ' | append: p.excerpt | append: ' ' | append: p.category | downcase }}">
+        {% if p.cover %}
+        <img src="{{ p.cover | relative_url }}" alt="{{ p.title }}" style="width:100%;height:170px;object-fit:cover;display:block;">
+        {% else %}
+        <div class="nm-placeholder" style="height:170px;background:var(--nm-{{ p.category_color | default: 'teal' }});opacity:0.92;"><span>cover</span></div>
+        {% endif %}
+        <div style="padding:22px;display:flex;flex-direction:column;gap:12px;flex:1;">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--nm-mute);">
+            <span style="color:var(--nm-{{ p.category_color | default: 'teal' }});">● {{ p.category }}</span> · {{ p.reading_time }} · {{ p.author }}
+          </div>
+          <h3 style="font-size:20px;font-weight:600;letter-spacing:-0.015em;line-height:1.18;">{{ p.title }}</h3>
+          <p style="font-size:15px;color:var(--nm-mute);line-height:1.5;margin:0;">{{ p.excerpt }}</p>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    <div data-journal-empty style="display:none;text-align:center;padding:80px 20px;color:var(--nm-mute);">
+      <div style="font-size:40px;margin-bottom:12px;">◔</div>
+      <div style="font-size:18px;">No articles match "<span data-journal-empty-query></span>"<span data-journal-empty-category></span>.</div>
+    </div>
+  </section>
+</main>

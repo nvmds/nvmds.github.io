@@ -1,0 +1,87 @@
+- name: "Nele Dierckx"
+  slug: nele
+  color: teal
+  role: "Functional & Business Analyst · Product Owner"
+  summary: "10+ years translating complex business needs into clear, actionable solutions — improving processes, aligning stakeholders and driving digital transformation."
+  img: /assets/images/nele-portrait.jpeg
+  img_position: "50% 38%"
+  context_img: /assets/images/nele-context.jpeg
+  context_position: "48% 80%"
+  context_zoom: 2.1
+  home_img: /assets/images/nele-home.jpeg
+  home_position: "50% 42%"
+  roles:
+    - title: "Founder · Hands-on Analyst"
+      org: "Neverminds VOF"
+      when: "2026 — now"
+      description: "Full-time on Neverminds. First project: consultant at bcs ePowerHR — implementation of their HR software solutions."
+    - title: "Business Analyst"
+      org: "we+ Benelux — at Ravago Group"
+      when: "2023 — Jul 2026"
+      description: "Supply chain & logistics: requirements, story breakdown and country-specific e-delivery roll-outs across Romania, Greece and Mexico."
+    - title: "Business Analyst · Scrum Master"
+      org: "RGF Staffing Belgium"
+      when: "2017 — 2023"
+      description: "Built a low-code (OutSystems) workforce-management platform and rolled out VMS tooling for Fluvius, DHL and Vlaamse Overheid, a.o."
+    - title: "Operations & workforce roles"
+      org: "Start People"
+      when: "2006 — 2017"
+      description: "In-house management for Estée Lauder and Coca-Cola — process optimisation and team lead."
+  tags:
+    - "Professional Scrum Master I"
+    - "Scrum Facilitation"
+    - "SAFe"
+    - "Low-code · OutSystems"
+    - "Jira · Confluence · Figma"
+
+- name: "Michael Voorhaen"
+  slug: michael
+  color: orange
+  role: "Product Manager · Agile Leadership & Org Design"
+  summary: "20+ years across the full tech stack — from a Ph.D. and hands-on software craft to product leadership, now reshaping organisations for agility and efficiency."
+  img: /assets/images/michael-portrait.jpeg
+  img_position: "50% 32%"
+  context_img: /assets/images/michael-context.jpeg
+  context_position: "60% 30%"
+  context_zoom: 1.5
+  home_img: /assets/images/michael-portrait.jpeg
+  home_position: "50% 35%"
+  roles:
+    - title: "Founder · Product & Org Advisor"
+      org: "Neverminds VOF"
+      when: "2026 — now"
+      description: "Co-founder of Neverminds: product leadership, facilitation and organisation design for clients turning complexity into product."
+    - title: "Product Manager — Planning"
+      org: "Protime"
+      when: "2024 — now"
+      description: "Owns the planning domain across three products — myProtime Planning Shift, myProtime Planning Flex and Strobbo."
+    - title: "Product Owner"
+      org: "Strobbo, a Protime company"
+      when: "2019 — 2024"
+      description: "Guided the company from start-up to scale-up, building a true product-led organisation."
+    - title: "Full-Stack Software Developer"
+      org: "Selligent Marketing Cloud"
+      when: "2014 — 2019"
+      description: "Various roles — full-stack developer, project manager, UI/UX tech lead — including managing three off-shore teams in India."
+    - title: "Software Engineer"
+      org: "nCentric"
+      when: "2014"
+      description: "Company that acquired the Meshbone wireless mesh networking technology."
+    - title: "Senior Researcher"
+      org: "IBBT-PATS-UA"
+      when: "2008 — 2014"
+      description: "Research focused on wireless ad-hoc and mesh networks; taught networking classes."
+    - title: "Lead Developer"
+      org: "Meshbone"
+      when: "2007 — 2014"
+      description: "Spin-off of IBBT and the University of Antwerp delivering wireless mesh networking software."
+    - title: "Ph.D. Student · Researcher"
+      org: "IBBT-PATS-UA"
+      when: "2003 — 2008"
+      description: "Ph.D. in Computer Science, University of Antwerp."
+  tags:
+    - "Professional Scrum Product Owner I"
+    - "LeSS Practitioner"
+    - "Org Topologies"
+    - "Designing Agile Organizations"
+    - "Evidence-Based Management"

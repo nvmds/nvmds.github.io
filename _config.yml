@@ -1,0 +1,33 @@
+title: Neverminds
+description: >-
+  The bridge between business, tech and product — hands-on analysis,
+  sharp facilitation and operational excellence for teams turning
+  complexity into product.
+url: "https://neverminds.be"
+baseurl: ""
+
+author: Neverminds VOF
+email: info@neverminds.be
+
+# Build settings
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - node_modules

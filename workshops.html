@@ -1,0 +1,118 @@
+---
+layout: default
+nav_active: "Workshops"
+title: "Workshops & Speaking"
+permalink: /workshops/
+---
+{% assign michael = site.data.founders | where: "slug", "michael" | first %}
+<main>
+  <!-- HERO -->
+  <section class="nm-wrap" style="margin-top:clamp(20px,3vw,34px);">
+    <div class="nm-card nm-feat" style="border-radius:32px;overflow:hidden;">
+      <div style="padding:clamp(28px,4vw,52px);display:flex;flex-direction:column;justify-content:center;">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;background:var(--nm-cream);color:var(--nm-purple);padding:6px 12px;border-radius:999px;display:inline-block;font-weight:500;">Workshops &amp; Speaking</div>
+        <h1 style="font-size:clamp(32px,4.4vw,52px);letter-spacing:-0.035em;font-weight:600;line-height:1.04;margin:20px 0 0;">
+          Product leadership — <span style="color:var(--nm-purple);">facilitated</span>, <span style="color:var(--nm-orange);">workshopped</span> and spoken.
+        </h1>
+        <p style="font-size:clamp(16px,2vw,18px);color:var(--nm-mute);line-height:1.55;margin:20px 0 0;max-width:520px;">
+          Led by Michael Voorhaen — 20+ years across the full stack, from a Ph.D. and hands-on craft to reshaping organisations for agility. Sharp facilitation that turns a room of opinions into shared direction.
+        </p>
+        <div style="display:flex;align-items:center;gap:13px;margin-top:28px;">
+          <div style="width:52px;height:52px;border-radius:999px;padding:3px;background:var(--nm-{{ michael.color }});flex-shrink:0;">
+            <img src="{{ michael.img | relative_url }}" alt="{{ michael.name }}" style="width:100%;height:100%;object-fit:cover;object-position:{{ michael.img_position }};border-radius:999px;display:block;">
+          </div>
+          <div>
+            <div style="font-size:15.5px;font-weight:600;">{{ michael.name }}</div>
+            <div style="font-size:13.5px;color:var(--nm-mute);">{{ michael.role }}</div>
+          </div>
+        </div>
+      </div>
+      <div class="nm-feat-img" style="position:relative;min-height:320px;background:var(--nm-{{ michael.color }});">
+        <img src="{{ michael.context_img | relative_url }}" alt="{{ michael.name }} speaking" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:55% 35%;display:block;">
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMATS -->
+  <section class="nm-wrap nm-section">
+    <div class="nm-row-between" style="margin-bottom:24px;">
+      <h2 style="font-size:clamp(28px,4vw,40px);letter-spacing:-0.03em;font-weight:600;">Formats we run</h2>
+      <span style="font-size:15px;color:var(--nm-mute);">Half-day to multi-session</span>
+    </div>
+    <div class="nm-grid-2" style="align-items:stretch;">
+      {% for f in site.data.workshops.formats %}
+      <div class="nm-card nm-card-h" style="border-radius:24px;padding:clamp(24px,3vw,32px);display:flex;flex-direction:column;gap:14px;">
+        <span style="width:40px;height:40px;border-radius:12px;background:var(--nm-{{ f.color }});flex-shrink:0;display:block;"></span>
+        <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;line-height:1.12;">{{ f.title }}</h3>
+        <p style="font-size:15.5px;color:var(--nm-mute);line-height:1.55;margin:0;">{{ f.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- SPEAKING -->
+  <section class="nm-wrap nm-section">
+    <div class="nm-card" style="border-radius:32px;padding:clamp(28px,5vw,56px);background:var(--nm-navy);color:#fff;">
+      <div class="nm-grid-2" style="align-items:center;">
+        <div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;background:rgba(255,255,255,0.1);color:#fff;padding:6px 12px;border-radius:999px;display:inline-block;font-weight:500;">Speaking</div>
+          <h2 style="font-size:clamp(28px,4vw,40px);letter-spacing:-0.03em;font-weight:600;margin:18px 0 0;line-height:1.08;">
+            Keynotes and talks, at conferences and in-house.
+          </h2>
+          <p style="font-size:clamp(16px,2vw,18px);color:rgba(255,255,255,0.7);line-height:1.55;margin:16px 0 0;max-width:460px;">
+            Practical, opinionated sessions drawn from the field — not theory decks. Tailored to your team's stage and stakes.
+          </p>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;">
+          {% for t in site.data.workshops.speaking_topics %}
+          <span style="font-size:14px;font-weight:500;padding:10px 16px;border-radius:999px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);color:#fff;">{{ t }}</span>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPOKEN AT -->
+  <section class="nm-wrap nm-section">
+    <div class="nm-row-between" style="margin-bottom:24px;">
+      <h2 style="font-size:clamp(28px,4vw,40px);letter-spacing:-0.03em;font-weight:600;">Where Michael has spoken</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px;">
+      {% for e in site.data.workshops.engagements %}
+      <div class="nm-card nm-card-h" style="border-radius:22px;padding:clamp(22px,2.6vw,30px);display:grid;grid-template-columns:minmax(0,200px) 1fr;gap:clamp(16px,3vw,40px);align-items:start;">
+        <div>
+          <div style="font-size:17px;font-weight:700;letter-spacing:-0.015em;">{{ e.event }}</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--nm-mute);margin-top:6px;">{{ e.place }}</div>
+        </div>
+        <div>
+          {% if e.talk %}<div style="font-size:18px;font-weight:600;letter-spacing:-0.01em;line-height:1.25;">"{{ e.talk }}"</div>{% endif %}
+          <p style="font-size:14.5px;color:var(--nm-mute);line-height:1.5;margin:{% if e.talk %}8px 0 0{% else %}0{% endif %};">{{ e.note }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- CREDENTIALS -->
+  <section class="nm-wrap nm-section">
+    <div class="nm-row-between" style="margin-bottom:24px;">
+      <h2 style="font-size:clamp(28px,4vw,40px);letter-spacing:-0.03em;font-weight:600;">The credentials</h2>
+      <a href="{{ '/about/' | relative_url }}" style="font-size:15px;border-bottom:1px solid var(--nm-navy);padding-bottom:3px;">Full background →</a>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:10px;">
+      {% for t in michael.tags %}
+      <span style="font-size:14px;font-weight:500;padding:10px 16px;border-radius:999px;background:#fff;color:#2a3a52;border:1px solid var(--nm-line);">{{ t }}</span>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- RELATED READING -->
+  <section class="nm-wrap nm-section">
+    <div class="nm-row-between">
+      <h2 style="font-size:clamp(28px,4vw,40px);letter-spacing:-0.03em;font-weight:600;">Related reading</h2>
+      <a href="{{ '/journal/' | relative_url }}" style="font-size:15px;border-bottom:1px solid var(--nm-navy);padding-bottom:3px;">Read the journal →</a>
+    </div>
+  </section>
+
+  {% include contact-cta.html title="Want to bring a workshop to your team?" subtitle="Book a session or a talk, or talk through what your team needs to learn next — we'll shape it with you." %}
+</main>

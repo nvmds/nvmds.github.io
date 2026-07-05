@@ -1,0 +1,25 @@
+{% assign nav_links = "About|/about/,Services|/services/,Workshops|/workshops/,Journal|/journal/" | split: "," %}
+<div class="nm-nav-outer">
+  <div class="nm-wrap">
+    <nav class="nm-nav">
+      <a href="{{ '/' | relative_url }}" aria-label="Neverminds home" style="display:flex;align-items:center;">
+        <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Neverminds" style="height:32px;width:auto;display:inline-block;">
+      </a>
+      <div class="nm-nav-links">
+        {% for entry in nav_links %}
+          {% assign parts = entry | split: "|" %}
+          <a href="{{ parts[1] | relative_url }}" class="{% if page.nav_active == parts[0] %}active{% endif %}">{{ parts[0] }}</a>
+        {% endfor %}
+        <a class="nm-cta" href="{{ '/#contact' | relative_url }}">Say hi</a>
+      </div>
+      <button class="nm-burger" aria-label="Menu"><span></span></button>
+    </nav>
+    <div class="nm-drawer">
+      {% for entry in nav_links %}
+        {% assign parts = entry | split: "|" %}
+        <a href="{{ parts[1] | relative_url }}" class="{% if page.nav_active == parts[0] %}active{% endif %}">{{ parts[0] }}</a>
+      {% endfor %}
+      <a href="{{ '/#contact' | relative_url }}" style="background:var(--nm-orange);color:#fff;font-weight:600;text-align:center;">Say hi</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+{% assign cta_title = include.title | default: "Got something complex to untangle?" %}
+{% assign cta_subtitle = include.subtitle | default: "Tell us what's stuck. We'll think along on the right next step." %}
+<div id="contact" class="nm-wrap nm-section">
+  <div style="background:var(--nm-navy);border-radius:32px;padding:clamp(36px,6vw,72px);text-align:center;color:#fff;">
+    <h2 style="font-size:clamp(30px,5vw,52px);letter-spacing:-0.03em;font-weight:600;line-height:1.04;margin:0 auto;max-width:760px;">
+      {{ cta_title }}
+    </h2>
+    <p style="font-size:clamp(16px,2vw,19px);color:rgba(255,255,255,0.7);margin:18px auto 30px;max-width:540px;">
+      {{ cta_subtitle }}
+    </p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+      <a href="mailto:info@neverminds.be" style="background:var(--nm-orange);color:#fff;padding:16px 32px;border-radius:999px;font-weight:600;font-size:16px;">info@neverminds.be</a>
+    </div>
+  </div>
+</div>

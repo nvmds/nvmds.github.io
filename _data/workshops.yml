@@ -1,0 +1,30 @@
+formats:
+  - title: "Roadmap World Café"
+    color: purple
+    description: "A facilitation format that gets a whole organisation to co-create a goal-oriented roadmap in a single day — many voices, one direction, outcomes over features."
+  - title: "Product Management in the age of AI"
+    color: teal
+    description: "Theory and best practices, what AI brings to the table, and where it will only multiply the systemic problems already there. Together we find where AI can be a real strategic lever."
+  - title: "Team alignment & facilitation"
+    color: orange
+    description: "Structured sessions to surface assumptions, resolve dependencies and get a team genuinely pulling the same way."
+  - title: "Organisation design session"
+    color: lime
+    description: "The foundations of org design, applied in practice to your organisation — assess first, then build fit-for-purpose."
+
+speaking_topics:
+  - "Product Leadership"
+  - "Roadmapping & direction"
+  - "Team design & structure"
+  - "Agile scaling"
+  - "Organisational entropy"
+
+engagements:
+  - event: "FlowCon"
+    place: "Paris · 2026"
+    talk: "Org Topologies from the trenches"
+    note: "On the Feedback Loop track — reshaping team boundaries in practice, and what actually happened when we tried."
+  - event: "LeSS Conference"
+    place: "Amsterdam · 2025"
+    talk: "The Strobbo Experiment: Elevating Katas on the Road to Business Agility"
+    note: "Sharing the Strobbo journey — how small, structured experiments inform product calls."

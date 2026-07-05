@@ -1,0 +1,40 @@
+- title: "Business & Functional Analysis"
+  description: "Requirements gathering, solution design, story breakdown and testing."
+  color: teal
+  icon: "✦"
+  who: "Nele"
+- title: "Process & Change Management"
+  description: "As-is/to-be analysis, process handbook, training and go-live support."
+  color: orange
+  icon: "⇄"
+  who: "Nele"
+- title: "Product Ownership"
+  description: "Value-driven prioritisation via workshops, roadmap ownership, backlog and refinements."
+  color: lime
+  icon: "◆"
+  who: "Nele & Michael"
+- title: "Agile Coaching & Facilitation"
+  description: "Team ceremonies, coaching and impediment removal."
+  color: teal
+  icon: "◴"
+  who: "Nele & Michael"
+- title: "Product Development"
+  description: "Discovery, MVP definition, product-market fit, iterative build, low-code."
+  color: lime
+  icon: "▲"
+  who: "Nele & Michael"
+- title: "Organisation Transformation"
+  description: "Conscious org design and agile scaling — assess first, then build for purpose."
+  color: purple
+  icon: "❖"
+  who: "Michael"
+- title: "Workshops & Facilitation"
+  description: "Roadmap World Café, Product Management in the age of AI, team alignment."
+  color: orange
+  icon: "✳"
+  who: "Michael"
+- title: "Speaking & Thought Leadership"
+  description: "Keynotes and talks at conferences and in-house sessions."
+  color: purple
+  icon: "◉"
+  who: "Michael"
