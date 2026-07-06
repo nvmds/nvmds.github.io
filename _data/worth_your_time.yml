@@ -14,14 +14,19 @@ categories:
     color: orange
     description: "Leading with honesty, choosing better language and earning trust through service."
 
-  - name: "Organizational design & systems thinking"
-    slug: organizational-design-systems-thinking
+  - name: "Organizational design"
+    slug: organizational-design
     color: teal
-    description: "Understanding organizations as systems and designing them more deliberately."
+    description: "Designing structures, boundaries and operating models that help organizations adapt and deliver value."
+
+  - name: "Systems thinking & flow"
+    slug: systems-thinking-flow
+    color: lime
+    description: "Seeing the whole system, understanding constraints and improving how value and learning flow through it."
 
   - name: "Direction & execution"
     slug: direction-execution
-    color: lime
+    color: orange
     description: "Connecting long-term purpose to visible, meaningful work."
 
 books:
@@ -42,6 +47,35 @@ books:
     cover_source: "https://learning.oreilly.com/library/cover/9781491973783/400w/"
     url: "https://www.oreilly.com/library/view/escaping-the-build/9781491973783/"
     recommendation: "A sharp explanation of why output-driven organizations keep shipping without creating value—and what effective product management must change."
+
+  - title: "User Story Mapping"
+    author: "Jeff Patton"
+    type: "Book"
+    category: "Product management"
+    cover: "/assets/images/worth-your-time/user-story-mapping.webp"
+    cover_source: "https://learning.oreilly.com/library/cover/9781491904893/400w/"
+    url: "https://www.oreilly.com/library/view/user-story-mapping/9781491904893/"
+    recommendation: "A practical way to build shared understanding of a product, keep the user's journey visible and slice work into releases that deliver meaningful outcomes."
+
+  - title: "Product Management Tools, Frameworks & Infographics"
+    author: "Roman Pichler"
+    type: "Toolkit"
+    category: "Product management"
+    cover: "/assets/images/worth-your-time/roman-pichler-product-management-tools.webp"
+    cover_source: "https://www.romanpichler.com/wp-content/uploads/2022/11/pm-framework.png"
+    url: "https://www.romanpichler.com/tools/"
+    recommendation: "A useful collection of practical templates and frameworks for product vision, strategy, roadmaps, personas, goals, KPIs, feedback and product backlogs."
+    link_label: "Explore the tools"
+
+  - title: "The Beautiful Mess"
+    author: "John Cutler"
+    type: "Blog"
+    category: "Product management"
+    cover: "/assets/images/worth-your-time/the-beautiful-mess.webp"
+    cover_source: "https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/ccf48548-b188-4c1c-8ddf-296017688c83_256x256.png"
+    url: "https://cutlefish.substack.com/"
+    recommendation: "Nuanced, practical writing about the realities of cross-functional product development, organizational change, decision-making and helping teams work more effectively."
+    link_label: "Read the blog"
 
   - title: "The Five Dysfunctions of a Team"
     author: "Patrick Lencioni"
@@ -70,6 +104,16 @@ books:
     url: "https://www.tablegroup.com/product/ideal-team-player/"
     recommendation: "Humble, hungry and smart is an immediately useful lens for hiring, developing and talking about how people contribute to a team."
 
+  - title: "Liberating Structures"
+    author: "Liberating Structures community"
+    type: "Toolkit"
+    category: "Teams & organizational health"
+    cover: "/assets/images/worth-your-time/liberating-structures.webp"
+    cover_source: "https://images.squarespace-cdn.com/content/v1/6967d2f98b1c6e5b230dc99b/c2f22b98-70d7-4604-be7e-140778bd710f/padded+LS+image.png"
+    url: "https://www.liberatingstructures.com/"
+    recommendation: "An open collection of simple interaction patterns that include every voice, distribute participation and help groups collaborate, learn and solve complex problems together."
+    link_label: "Explore the toolkit"
+
   - title: "Radical Candor"
     author: "Kim Scott"
     type: "Book"
@@ -91,7 +135,7 @@ books:
   - title: "The Fifth Discipline"
     author: "Peter M. Senge"
     type: "Book"
-    category: "Organizational design & systems thinking"
+    category: "Systems thinking & flow"
     cover: "/assets/images/worth-your-time/fifth-discipline.webp"
     cover_source: "https://images4.penguinrandomhouse.com/cover/9780385517256"
     url: "https://www.penguinrandomhouse.com/books/163984/the-fifth-discipline-by-peter-m-senge/"
@@ -100,16 +144,26 @@ books:
   - title: "Organization Design"
     author: "Nicolay Worren"
     type: "Book"
-    category: "Organizational design & systems thinking"
+    category: "Organizational design"
     cover: "/assets/images/worth-your-time/organization-design.webp"
     cover_source: "https://images.routledge.com/common/jackets/crclarge/978113850/9781138502864.jpg"
     url: "https://www.routledge.com/Organization-Design-Simplifying-complex-systems/Worren/p/book/9781138502864"
     recommendation: "A rigorous, practical toolkit for working with roles, units, interfaces and the complexity created by organizational structure."
 
+  - title: "Creating Agile Organizations"
+    author: "Cesario Ramos & Ilia Pavlichenko"
+    type: "Book"
+    category: "Organizational design"
+    cover: "/assets/images/worth-your-time/creating-agile-organizations.webp"
+    cover_source: "https://images-na.ssl-images-amazon.com/images/P/0135853192.01.LZZZZZZZ.jpg"
+    url: "https://www.informit.com/store/creating-agile-organizations-a-systemic-approach-9780135853191"
+    recommendation: "A systemic approach to aligning strategy, structure, processes and people practices—with concrete guidance for designing and evolving agile organizations at scale."
+    edition_note: "A Systemic Approach."
+
   - title: "10X ORG"
     author: "Alexey Krivitsky, Craig Larman & Roland Flemm"
     type: "Book"
-    category: "Organizational design & systems thinking"
+    category: "Organizational design"
     cover: "/assets/images/worth-your-time/10x-org.webp"
     cover_source: "https://www.10xorg.com/images/book-cover-smaller.jpg"
     url: "https://www.10xorg.com/"
@@ -119,7 +173,7 @@ books:
   - title: "Navigating Complexity of Cognitive Load in Software Product Development"
     author: "Jürgen De Smet & Viktor Grgić"
     type: "Free eBook"
-    category: "Organizational design & systems thinking"
+    category: "Organizational design"
     cover: "/assets/images/worth-your-time/cognitive-load.webp"
     cover_source: "https://uploads.teachablecdn.com/attachments/a3tgYErMRiu7z4QasP24_01.+book+cover+right.png"
     url: "https://learnhow.simplification.works/p/cognitive-load"
@@ -129,7 +183,7 @@ books:
   - title: "Reinventing Organizations"
     author: "Frédéric Laloux"
     type: "Book"
-    category: "Organizational design & systems thinking"
+    category: "Organizational design"
     cover: "/assets/images/worth-your-time/reinventing-organizations.webp"
     cover_source: "https://covers.openlibrary.org/b/id/9159064-L.jpg"
     url: "https://www.reinventingorganizations.com/"
@@ -143,6 +197,16 @@ books:
     cover_source: "https://simonsinek.com/images/books/the-infinite-game.webp"
     url: "https://simonsinek.com/books/the-infinite-game"
     recommendation: "A helpful shift from short-term winning to purpose, resilience and the responsibility to keep improving over time."
+
+  - title: "The Goal"
+    author: "Eliyahu M. Goldratt & Jeff Cox"
+    type: "Book"
+    category: "Systems thinking & flow"
+    cover: "/assets/images/worth-your-time/the-goal.webp"
+    cover_source: "http://d2rd7nn8lguocz.cloudfront.net/P/The-Goal-Book.jpg"
+    url: "https://www.toc-goldratt.com/en/product/the-goal-a-process-of-ongoing-improvement"
+    recommendation: "A compelling introduction to the Theory of Constraints: improve the whole system by finding its limiting constraint, managing flow and repeating the process."
+    edition_note: "A Process of Ongoing Improvement."
 
   - title: "Leading with Obeya"
     author: "Tim Wiegel"

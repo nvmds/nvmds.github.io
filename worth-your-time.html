@@ -53,7 +53,7 @@ permalink: /worth-your-time/
             <div class="wyt-author">{{ book.author }}</div>
             <p>{{ book.recommendation }}</p>
             {% if book.edition_note %}<div class="wyt-edition">{{ book.edition_note }}</div>{% endif %}
-            <span class="wyt-read" style="color:var(--nm-{{ category.color }});">Explore the book <span aria-hidden="true">↗</span></span>
+            <span class="wyt-read" style="color:var(--nm-{{ category.color }});">{{ book.link_label | default: "Explore the book" }} <span aria-hidden="true">↗</span></span>
           </div>
         </a>
         {% endfor %}
