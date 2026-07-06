@@ -4,6 +4,7 @@ title: "Bet on your roadmap"
 author: Michael Voorhaen
 category: "Roadmap Mastery"
 category_color: lime
+series: "Roadmap Mastery"
 reading_time: "6 min"
 excerpt: "Estimating big, fuzzy, far-off roadmap items feels like forecasting next month's weather. What if you treated them as bets instead?"
 carousels:
@@ -54,7 +55,3 @@ Bets on the roadmap serve as constraints that guide the prioritization and scope
 ### Conclusion
 
 Betting on your roadmap is a powerful way to get everyone involved and ensure that you’re focusing on what truly matters. By shifting the conversation from size to cost, and using a currency that everyone understands, you can have more productive and insightful discussions about your priorities. Plus, it keeps you accountable and helps ensure that every sprint is delivering maximum value. I’ve seen firsthand how this approach can transform the way teams work together. Give it a try—you might find it’s the game-changer your team needs.
-
----
-
-In the next article, I’ll show you how to enhance collaboration and transparency with the World Café technique. This approach brings together your team and stakeholders in a more dynamic, interactive way to discuss the roadmap, helping you gather diverse insights and foster a sense of shared ownership.

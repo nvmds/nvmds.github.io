@@ -4,6 +4,7 @@ title: "Create a goal-oriented roadmap"
 author: Michael Voorhaen
 category: "Roadmap Mastery"
 category_color: lime
+series: "Roadmap Mastery"
 reading_time: "8 min"
 excerpt: "From a Gantt-like slog to strategic goals and the work behind them — the search for a roadmap format that finally felt right."
 carousels:
@@ -95,7 +96,3 @@ As a product owner, your role goes beyond managing tasks—it's about providing 
 Effective communication is key. A goal-oriented roadmap opens the door to visual progress tracking, helping keep everyone on the same page. When your team understands both the what and the why, they’re more connected to the outcomes.
 
 Start with clear, manageable goals, communicate them effectively, and watch your team drive meaningful progress.
-
----
-
-In the next article, I’ll show you how to avoid the common pitfall of teams getting stuck on a goal without delivering. We’ll explore an approach called "Betting on Your Roadmap," which shifts the focus from estimating task size to determining how much you're willing to invest in a feature. This method not only helps set clear priorities but also ensures that you’re making smart investment decisions that keep your team moving forward.

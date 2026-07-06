@@ -4,6 +4,7 @@ title: "Do a Roadmap World Café"
 author: "Michael Voorhaen"
 category: "Roadmap Mastery"
 category_color: lime
+series: "Roadmap Mastery"
 reading_time: "8 min"
 excerpt: "A facilitation experiment for Product Owners: get a whole group to co-create roadmap direction in a single session."
 carousels:

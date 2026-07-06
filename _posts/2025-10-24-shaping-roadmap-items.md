@@ -5,6 +5,7 @@ subtitle: "Building resilient and adaptive roadmaps"
 author: "Michael Voorhaen"
 category: "Roadmap Mastery"
 category_color: lime
+series: "Roadmap Mastery"
 reading_time: "7 min"
 excerpt: "Balancing scope, time and quality in roadmap items — without sliding back into feature-focused planning."
 changelog:

@@ -1,0 +1,15 @@
+{% assign next_url = include.url | default: include.post.url %}
+{% assign next_title = include.title | default: include.post.title %}
+{% assign next_description = include.description | default: include.post.excerpt %}
+<div class="nm-next-article-wrap">
+  <a class="nm-next-article" href="{{ next_url | relative_url }}" aria-label="Read next: {{ next_title }}">
+    <span class="nm-next-article-label">Next in {{ include.series | default: "this series" }}</span>
+    <span class="nm-next-article-content">
+      <span>
+        <strong>{{ next_title }}</strong>
+        <span class="nm-next-article-copy">{{ next_description }}</span>
+      </span>
+      <span class="nm-next-article-arrow" aria-hidden="true">→</span>
+    </span>
+  </a>
+</div>
