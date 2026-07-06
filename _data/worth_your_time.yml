@@ -189,6 +189,16 @@ books:
     url: "https://www.reinventingorganizations.com/"
     recommendation: "A challenge to many default assumptions about management, grounded in examples of self-management, wholeness and evolutionary purpose."
 
+  - title: "Architect van je organisatie"
+    author: "Philippe Bailleur"
+    type: "Book"
+    category: "Organizational design"
+    cover: "/assets/images/worth-your-time/architect-van-je-organisatie.webp"
+    cover_source: "https://static.wixstatic.com/media/f1dfec_a60ded0b54804225ba46b7a9bfa1ae4b~mv2_d_2322_3000_s_2.jpg"
+    url: "https://www.philippebailleur.be/architect-van-je-organisatie"
+    recommendation: "A practical, systemic view of organizations as living systems, connecting organizational design with the conditions people need to contribute their best work."
+    edition_note: "Breng het beste in mensen naar boven. Available in Dutch."
+
   - title: "The Infinite Game"
     author: "Simon Sinek"
     type: "Book"
