@@ -64,7 +64,9 @@ extra_js: /assets/js/journal.js
           <span style="font-size:15px;font-weight:600;border-bottom:2px solid var(--nm-{{ featured.category_color | default: 'teal' }});align-self:flex-start;padding-bottom:2px;margin-top:4px;">Read article →</span>
         </div>
       </a>
-      <a href="{{ '/worth-your-time/' | relative_url }}" class="nm-journal-trove-link">
+      <a href="{{ '/worth-your-time/' | relative_url }}" class="nm-journal-trove-link"
+         data-journal-card="All"
+         data-journal-search="worth your time books resources recommended by michael">
         <span class="nm-journal-trove-head">
           <span>
             <strong>Worth Your Time</strong>
